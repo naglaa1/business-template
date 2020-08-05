@@ -1,0 +1,607 @@
+:root {
+    --main-color: #a4c63b;
+    --secondary-color: #7f973c;
+    --main-padding: 10px;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+/* start upper bar*/
+.upper-bar {
+    background-color: var(--main-color);
+    color: #fff;
+}
+.upper-bar .date-and-time {
+    flex:1;
+}
+.upper-bar .social-media {
+    flex: 1;
+    text-align: right;
+}
+.upper-bar .social-media ul {
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+}
+.upper-bar .social-media ul li {
+    width: 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;/*center content  throw y*/
+    justify-content: center;/*center content throw x*/
+    border-left: 1px solid #b9d956;
+ }
+.upper-bar .social-media ul li:last-child {
+    border-right: 1px solid  #b9d956;
+}
+.upper-bar .social-media ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.upper-bar .social-media ul .fa {
+    font-size: 12px;
+}
+.upper-bar .date-and-time ul {
+    display: flex;
+    font-size: 12px;
+}
+.upper-bar .date-and-time ul li {
+    padding: 0 10px;
+    border-left: 1px solid #b9d956;
+    height: 30px;
+    display: flex;
+    align-items: center;/*center content  throw y*/
+    justify-content: center;/*center content throw x*/
+ }
+.upper-bar .date-and-time ul li:last-child {
+    border-right: 1px solid  #b9d956;
+}
+.upper-bar .date-and-time ul .fa {
+    font-size: 12px;
+    margin-right: 10px;
+}
+/*end upper bar*/
+
+/* start landing*/
+.landing {
+    background-image: url("../images/landing.jpg");
+    min-height: calc(100vh);/* dont work with -30*/
+    position: relative;
+}
+.landing .overlay {
+    background-color: rgba(51,51,51,.8);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.landing .navbar {
+    position: relative; /* why we use relative here ,on make that befroe in landing*/
+    z-index: 2;
+    color: #fff;
+} 
+.landing .navbar .logo {
+    margin: 0;
+    padding: 30px 0;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    flex-grow: 1;
+}
+.landing .navbar .links-list {
+    display: flex;
+    flex-grow: 3;
+    justify-content: flex-end;
+    align-items: center;
+} 
+.landing .navbar .links-list li {
+    margin-left:  20px;
+}  
+.landing .navbar .links-list li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+}
+.landing .navbar .links-list li a.active,
+.landing .navbar .links-list li a.hover {
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color)
+} 
+.landing .info {
+    width: 50%;
+    padding: 50px 0;
+} 
+.landing .info .help-p {
+    color: var(--main-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 22px;
+    letter-spacing: -1;
+}
+.landing .info .head-p {
+    font-size: 55px;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+}
+.landing .info .details-p {
+    color: #fff;
+    line-height: 2;
+}
+.landing .info button {
+    background-color: var(--main-color);
+    color: #fff;
+    font-weight: bold;
+   padding: 15px 20px;
+}
+.landing .info button:hover {
+    background-color: var(--secondary-color);
+}
+/*end landing*/
+
+/* start contact*/
+.contact {
+    background-color: var(--main-color);
+    color: #fff;
+}
+.contact  .text {
+    flex-grow: 1;
+}
+.contact .button {
+    width: 102px;
+}
+.contact .button button {
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    font-size: 12px;
+    background: none;
+    color: #fff;
+    height: 42px;
+    width: 140px;
+}
+/* end contact*/
+
+/*start financial service*/
+
+.top-services {
+    width: 100%;
+   padding: 70px 0 30px 0;
+    margin-top: 30px;
+    text-align: center;
+}
+.top-services p {
+    margin: 0;
+    line-height: 1.5;
+}
+.top-services p:first-child {
+    font-size: 40px;
+}
+.top-services span {
+    color: var(--main-color);
+}
+.img-text {
+    padding-bottom: 110px;
+}
+.medium-services {
+    margin: 0 30px 0 0;
+    width: 100%;
+    flex-grow: 1;
+}
+.medium-services .imag-services-1{
+    background-image: url("https://360suite.io/wp-content/uploads/2016/09/save-time-money-256x256.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 220px;
+}
+.medium-services .imag-services-2 {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRMSKNYsM6ib1-eTU9_98IPzH7jYAeQZqYXTA&amp;usqp=CAU");
+    background-size: cover;
+    height: 220px;
+}
+.medium-services .imag-services-3 {
+    background-image: url("https://360suite.io/wp-content/uploads/2017/01/business-objects-sap-256x256.jpg");
+    background-size: cover;
+    height: 220px;
+    margin-right: 0;
+}
+.medium-services .text-services {
+    background-color: #F7F7F7;
+    text-align: left;
+    padding: 30px;
+}
+.text-services p:first-child {
+    font-size: 17px;
+    letter-spacing: -3;
+    margin: 0;
+}
+.medium-services .text-services .description {
+    font-size: 14px;
+    line-height: 2;
+    color:#571e79;
+}
+.medium-services .text-services button {
+    background-color: var(--main-color);
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 10px 20px;
+}
+/*End financial service*/
+
+/*Start solution*/
+.solution {
+    background-image: url("https://uploads-ssl.webflow.com/5c669b172f71d63c5feafcd0/5ce6a73817fb0ab67f4b5555_16.BusinessModel-min.jpg");
+    min-height: 100vh;
+    position: relative;
+    color: #fff;
+}
+.solution .overlay {
+    background-color: rgba(15, 2, 2, 0.9);
+}
+.solution .container {
+    height: 100%;
+}
+.solution .growth {
+    position: relative; /* why we use relative here ,on make that befroe in landing*/
+    z-index: 2;
+    color: #fff;
+    width: 50%;
+    margin: 150px 0 50px 0;
+}
+.solution .growth.left p {
+    margin: 0;
+}
+.solution .growth.left p:first-child {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: rgb(155, 151, 151);
+}
+.solution .growth.left p:nth-child(2) {
+    font-size: 35px;
+}
+.solution .growth.left p:nth-child(3) {
+    color: var(--main-color);
+    font-size: 30px;
+    padding-bottom: 25px;
+}
+.solution .growth.left p:nth-child(4),
+.solution .growth.left p:nth-child(5) {
+    font-size: 14px;
+    line-height: 2;
+    padding-right: 30px;
+    padding-bottom: 40px;
+    color: rgb(155, 151, 151);
+}
+.solution .growth.left button {
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.growth.right {
+    height: 100%;
+    padding-top: 30px;
+}
+.growth .row.skills-rang {
+    margin-bottom: 22px;
+    width: 100%;
+}
+.growth .row.skills-rang .skills {
+    width: 50%;
+    height: 130px;
+    background-color: #3B3B39;
+    margin-right: 22px;
+   text-align: center;
+    justify-items: center;
+}
+.growth .row.skills-rang .skills p:first-child {
+    color: var(--main-color);
+    margin-bottom: 0;
+    font-size: 30px;
+}
+/*End solution*/
+
+/*Start about company*/
+.about-company .row.company {
+    margin: 130px 0 130px 0;
+}
+.about-company .img-company {
+    background-image: url("https://www.lebigdata.fr/wp-content/uploads/2017/06/business-intelligence-compressed-660x330.jpg");
+    background-size: cover;
+    height: 400px;
+    width: 50%;
+}
+.about-company .details-company {
+    height: 400px;
+    width: 50%;
+    background-color: #F7F7F7;
+    padding: 35px;
+    box-sizing: border-box;
+}
+.about-company .details-company p:first-child {
+    text-transform: uppercase;
+    font-size: 14px;
+    margin: 0;
+    color: rgb(155, 151, 151);
+}
+.about-company .details-company p:nth-child(2) {
+    font-size: 37px;
+    margin-top: 7px;
+    margin-bottom: 12px;
+} 
+.about-company .details-company span {
+    color: var(--main-color);
+}
+.about-company .details-company p:nth-child(3),
+.about-company .details-company p:nth-child(4) {
+    color: rgb(155, 151, 151);
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 0;
+}
+.about-company .details-company button {
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 10px 20px;
+    margin: 20px 0;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+/*End about company*/
+
+/*start say-aboutus*/
+.say-aboutus {
+    background-color: #F7F7F7;
+    min-height: 100vh;
+    padding-bottom: 100px;
+}
+.say-aboutus .greatest-clients {
+    text-align: center;
+}
+.say-aboutus .greatest-clients p:first-child {
+    font-size: 40px;
+    margin: 0;
+    padding-top: 120px;
+}
+.say-aboutus .greatest-clients span {
+    color: var(--main-color);
+}
+.say-aboutus .greatest-clients p:nth-child(2) {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: rgb(155, 151, 151);
+    padding-bottom: 60px;
+}
+.say-aboutus .george-john {
+    background-color: #fff;
+    width: 50%;
+    margin: 0 22px 0 0;
+    text-align: center;
+    line-height: 2;
+    padding:0 20px 20px 20px;
+}
+.say-aboutus .george-john p:first-child{
+    font-size: 16px;
+    margin: 30px 0 5px 0;
+}
+.say-aboutus .george-john p:nth-child(2){
+    color: var(--main-color);
+    font-size: 14px;
+    letter-spacing: -2;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.say-aboutus .george-john p:nth-child(3){
+    font-size: 12px;
+    margin-top: 0;
+    color: rgb(155, 151, 151);
+}
+.say-aboutus  .button {
+    width: 50%;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.say-aboutus  .button button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    margin: 30px 0 0 0;
+    background-color: #CCCCCC;
+ }
+/*end say-aboutus*/
+
+/*start call-back*/
+.call-back {
+    min-height: 100vh;
+    padding-bottom: 80px;
+}
+.call-back .request {
+    text-align: center;
+    padding-top: 120px;
+}
+.call-back .request p:first-child {
+    font-size: 35px;
+    margin: 0;
+}
+.call-back .request span {
+    color: var(--main-color);
+}
+.call-back .request p:nth-child(2) {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 5;
+    color: rgb(148, 144, 144);
+    margin-bottom: 60px;
+}
+.call-back .form {
+    background-color: var(--main-color);
+    color: rgb(194, 189, 189);
+    padding: 50px 40px;
+    font-size: 12px;
+    margin: 0px 0 40px 0;
+}
+.call-back .form .row.input {
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.call-back .form input {
+    width: 30%;
+    height: 35px;
+    border: none;
+    padding-left: 15px;
+    letter-spacing: -3;
+}
+.call-back .form textarea {
+    width: 100%;
+    height: 100px;
+    border: none;
+    padding: 15px 0 0 15px;
+}
+.call-back .form .button {
+    text-align: center;
+    padding-bottom: 20px;
+}
+.call-back .form  button {
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 10px 20px;
+   text-transform: uppercase;
+    /**margin: 20px 0;**/
+    border: 2px solid #fff;
+    margin-top: 30px;
+}
+
+/*End call-back*/
+
+/*start all-info*/
+.all-info {
+    background-color: #F7F7F7;
+}
+.all-info .row.info {
+    padding: 30px 0 50px 0;
+}
+.all-info .logotext {
+    display: flex;
+    width: 25%;
+    justify-content: space-between;
+    margin: 0 10px 0 0;
+}
+.all-info .logotext .fa {
+    font-size: 40px;
+    padding: 25px 0 30px 60px;
+    margin: 0;
+    color: rgb(134, 126, 126);
+}
+.all-info .logotext .text-info {
+    padding: 30px 50px 30px 0;
+    color: rgb(155, 151, 151);
+}
+.all-info .logotext .text-info p {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+.all-info .logotext .text-info p:nth-child(2) {
+    font-size: 10px;
+}
+/*End all-info*/
+
+/*start more-info*/
+.more-info {
+    background-color: #232323;
+    color: #fff;
+    min-height: 70vh;
+}
+.more-info .row.total {
+    padding: 50px 0 30px 0;
+    margin: 0;
+}
+.more-info .last {
+    width: 25%;
+    margin: 0 15px 0 0;
+    justify-content: space-between;
+}
+.more-info .last.finanace-business p:first-child,
+.more-info .last.useful-links p:first-child,
+.more-info .last.additional-page p:first-child {
+    font-size: 18px;
+    padding-bottom: 12px;
+}
+.more-info .last.finanace-business p:nth-child(2),
+.more-info .last.useful-links ul ,
+.more-info .last.additional-page ul{
+    font-size: 14px;
+    line-height: 2;
+    color: rgb(187, 184, 184);
+}
+.more-info .last.finanace-business ul li {
+    display: inline-block;
+}
+.more-info .last.finanace-business ul li .fa {
+    font-size: 14px;
+    text-align: center;
+    margin: 10px 10px 0 0;
+    padding-top: 10px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: block;
+    background-color: #fff;
+    color: black;
+ }
+.more-info .last.contact-as form {
+    margin: 40px 0 0 0;
+}
+.more-info .last.contact-as form input,
+.more-info .last.contact-as form textarea {
+    margin-bottom: 10px;
+    padding: 15px;
+    border: none;
+    background-color: #343434;
+    font-size: 14px;
+    width: 100%;
+}
+.more-info .last.contact-as form input {
+    height: 10px;
+}
+.more-info .last.contact-as form textarea {
+    height: 90px;
+}
+.last.contact-as form button {
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+/*end more-info*/
+
+/*start footer*/
+footer {
+    background-color: #343434;
+    color: #fff;
+    height: 70px;
+    text-align: center;
+}
+footer p {
+    margin: 0;
+    padding-top: 35px;
+    font-size: 14px;
+    color: rgb(155, 151, 151);
+}
+/*end footer*/
+
+
+
+
